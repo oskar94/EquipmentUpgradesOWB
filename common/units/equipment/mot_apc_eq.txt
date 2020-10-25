@@ -1,0 +1,209 @@
+equipments = {
+	apc_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		type = {
+			#infantry #Removing inf type
+			mechanized
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		upgrades = {
+			#pa_redundancy_upgrade
+			#pa_production_upgrade
+			#pa_plating_upgrade
+			#pa_shock_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.75
+
+		#Defensive Abilities
+		defense = 2
+		breakthrough = 4
+		hardness = 0.30
+		armor_value = 25
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 4
+		ap_attack = 4
+		air_attack = 0
+
+		fuel_consumption = 0.3
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+
+		build_cost_ic = 14.5
+		resources = {
+
+		}
+	}
+
+	# Scrap Trucks
+	truck_equipment_1 = {
+		archetype = apc_equipment
+		priority = 10
+		visual_level = 1
+		type = motorized
+
+		build_cost_ic = 8
+		resources = {
+			metal = 1
+			circuitry = 1
+			water = 1
+			energy = 1
+		}
+	}
+
+	# Salvaged Trucks
+	truck_equipment_2 = {
+		archetype = apc_equipment
+		parent = truck_equipment_1
+		priority = 30
+		visual_level = 2
+
+		maximum_speed = 6.5
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 6
+		hardness = 0.40
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 15
+		hard_attack = 8
+		ap_attack = 8
+		air_attack = 0
+		fuel_consumption = 0.4
+
+		build_cost_ic = 20
+		resources = {
+			metal = 2
+			circuitry = 2
+			water = 1
+			energy = 1
+		}
+		
+		can_convert_from = {
+			truck_equipment_1
+		}
+	}
+
+	# Salvaged APC
+	apc_equipment_1 = {
+		archetype = apc_equipment
+		parent = truck_equipment_2
+		priority = 50
+		visual_level = 3
+
+		#Misc Abilities
+		maximum_speed = 7
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 8
+		hardness = 0.50
+		armor_value = 35
+		fuel_consumption = 0.5
+
+		#Offensive Abilities
+		soft_attack = 20
+		hard_attack = 12
+		ap_attack = 12
+		air_attack = 0
+
+		build_cost_ic = 25
+		resources = {
+			metal = 2
+			circuitry = 2
+			water = 2
+			energy = 2
+		}
+		
+		can_convert_from = {
+			truck_equipment_1
+			truck_equipment_2
+		}
+	}
+
+	# Wasteland APC
+	apc_equipment_2 = {
+		archetype = apc_equipment
+		parent = apc_equipment_1
+		priority = 70
+		visual_level = 4
+
+		maximum_speed = 7.5
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 10
+		hardness = 0.60
+		armor_value = 40
+		fuel_consumption = 0.6
+
+		#Offensive Abilities
+		soft_attack = 25
+		hard_attack = 16
+		ap_attack = 16
+		air_attack = 0
+
+		build_cost_ic = 28.5
+		resources = {
+			composites = 2
+			circuitry = 2
+			water = 2
+			energy = 2
+		}
+		
+		can_convert_from = {
+			truck_equipment_1
+			truck_equipment_2
+			apc_equipment_1
+		}
+	}
+
+	# Great War APC
+	apc_equipment_3 = {
+		archetype = apc_equipment
+		parent = apc_equipment_2
+		priority = 90
+		visual_level = 5
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 12
+		hardness = 0.7
+		armor_value = 45
+		fuel_consumption = 0.7
+
+		#Offensive Abilities
+		soft_attack = 30
+		hard_attack = 20
+		ap_attack = 20
+		air_attack = 0
+
+		build_cost_ic = 33
+		resources = {
+			composites = 3
+			circuitry = 2
+			water = 2
+			energy = 2
+		}
+		
+		can_convert_from = {
+			truck_equipment_1
+			truck_equipment_2
+			apc_equipment_1
+			apc_equipment_2
+		}
+	}
+}
