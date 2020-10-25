@@ -504,6 +504,10 @@ equipments = {
 		}
 
 		priority = 66
+		
+		can_convert_from = {
+			gauss_equipment_1
+		}
 	}
 
 	plasma_equipment_1 = {
@@ -571,5 +575,9 @@ equipments = {
 		}
 
 		priority = 75
+		
+		can_convert_from = {
+			plasma_equipment_1
+		}
 	}
 }
