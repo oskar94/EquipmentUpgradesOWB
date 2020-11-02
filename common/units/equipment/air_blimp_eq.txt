@@ -401,7 +401,7 @@ equipments = {
 		
 		can_convert_from = {
 			blimp_equipment_2
-			cleap_blimp_equipment_1
+			cheap_blimp_equipment_1
 		}
 	}
 
