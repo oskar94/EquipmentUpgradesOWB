@@ -7,5 +7,5 @@ dependencies={
 	"Old World Blues"
 }
 picture="thumbnail.png"
-supported_version="1.10.1"
+supported_version="1.10.*"
 remote_file_id="2268031720"
